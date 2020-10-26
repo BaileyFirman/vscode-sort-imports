@@ -1,0 +1,46 @@
+{
+    "name": "vscode-sort-imports",
+    "displayName": "Sort Imports",
+    "description": "Sort your typescript imports",
+    "version": "0.0.1",
+    "publisher": "baileyfirman",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BaileyFirman/vscode-sort-imports"
+    },
+    "bugs": {
+        "url": "https://github.com/BaileyFirman/vscode-sort-imports/issues"
+    },
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+          {
+            "command": "extension.sortTypeScriptImports",
+            "title": "Sort Imports"
+          }
+        ]
+      },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "tslint -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "typescript": "^3.9.7",
+        "@types/vscode": "^1.50.0"
+    },
+    "dependencies": {
+        "vsce": "^1.77.0"
+    },
+    "license": "MIT"
+}
